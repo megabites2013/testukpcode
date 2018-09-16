@@ -162,27 +162,6 @@ public class MainVerticle extends AbstractVerticle {
     }
   }
 
-  private void findOne(final JsonObject likeThis, final List<PostCode> resultHolder) {
-    mongo.findOne(
-        COLLECTION,
-        likeThis,
-        null,
-        ar -> {
-          if (ar.succeeded()) {
-            if (ar.result() == null) {
-              LOGGER.debug("MainVerticle - findOne: []  not found " + likeThis.toString());
-
-              return;
-            }
-            resultHolder.add(new PostCode(ar.result()));
-          } else {
-            LOGGER.debug("MainVerticle - findOne: XXX  " + ar.cause().getMessage());
-
-            return;
-          }
-        });
-  }
-
   private void updateOne(RoutingContext routingContext) {
     final String _id = routingContext.request().getParam("p");
     LOGGER.debug("MainVerticle - updateOne: _id = " + _id);

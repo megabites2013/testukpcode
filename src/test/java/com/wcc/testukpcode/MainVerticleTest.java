@@ -38,7 +38,6 @@ import static org.hamcrest.text.IsEqualIgnoringCase.equalToIgnoringCase;
  * @author SebastianX
  * @version 1.0
  */
-
 @RunWith(VertxUnitRunner.class)
 public class MainVerticleTest {
   /** The Logger. */
@@ -174,6 +173,35 @@ public class MainVerticleTest {
                   body -> {
                     context.assertTrue(
                         body.toString().contains("<title>UK PostCode Rest Test</title>"));
+                    async.complete();
+                  });
+            });
+  }
+
+  /**
+   * Check that we can list all the post codes availible.
+   *
+   * @param context the context
+   */
+  @Test
+  public void checkThatWeCanListAllThePostCodesAvailible(TestContext context) {
+    LOGGER.debug("MainVerticleTest - checkThatWeCanListAllThePostCodesAvailible");
+
+    Async async = context.async();
+    vertx
+        .createHttpClient()
+        .getNow(
+            port,
+            "localhost",
+            "/api/postcodes",
+            response -> {
+              context.assertEquals(response.statusCode(), 200);
+              context.assertEquals(
+                  response.headers().get("content-type"), "application/json; charset=utf-8"); // 3.2.1 v 3.5.3
+              response.bodyHandler(
+                  body -> {
+                    context.assertTrue(
+                        body.toString().contains("postcode"));
                     async.complete();
                   });
             });

@@ -47,9 +47,13 @@ after it starts, you want to open a browser to try following address:
 
 =get:
 http://localhost:8080
+
 http://localhost:8080/gui    (simple gui with CURD based on the rest API)
+
 http://localhost:8080/api/postcode
+
 http://localhost:8080/api/postcode/{a postcode id}
+
 
 =post,put,delete also availible
 the gui with CURD is based on the these rest APIs

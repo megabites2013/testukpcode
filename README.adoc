@@ -37,7 +37,7 @@ you may want to use: sudo chmod -R 777 /data for easy demo
 
 
 
-To run application:
+== To run application:
 ```
 ./mvnw clean exec:java
 ```
@@ -45,7 +45,7 @@ To run application:
 after it starts, you want to open a browser to try following address:
 
 
-=get:
+== get:
 
 http://localhost:8080
 
@@ -56,7 +56,7 @@ http://localhost:8080/api/postcode
 http://localhost:8080/api/postcode/{a postcode id without bracket}
 
 
-=post,put,delete also availible
+== post,put,delete also availible
 the gui with CURD is based on the these rest APIs
 
 

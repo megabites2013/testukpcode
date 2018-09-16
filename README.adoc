@@ -24,7 +24,7 @@ To package application:
 
 
 
-before run the application, you need to:
+== Before run the application, you need to:
 
 
 1. start a mongodb at localhost, with default port 27017  

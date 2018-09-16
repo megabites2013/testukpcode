@@ -1,8 +1,8 @@
 = Testukpcode
 
-image:https://img.shields.io/badge/vert.x-3.5.3-purple.svg[link="https://vertx.io"]
+image:https://careers.wcc-group.com/sites/all/themes/careeratwcc/images/wcc-logo-dark-120x032.png[link="https://careers.wcc-group.com/?page=1"]
 
-This application was generated using http://start.vertx.io
+
 
 == Building
 
@@ -23,9 +23,6 @@ To run your application:
 
 == Help
 
-* https://vertx.io/docs/[Vert.x Documentation]
-* https://stackoverflow.com/questions/tagged/vert.x?sort=newest&pageSize=15[Vert.x Stack Overflow]
-* https://groups.google.com/forum/?fromgroups#!forum/vertx[Vert.x User Group]
-* https://gitter.im/eclipse-vertx/vertx-users[Vert.x Gitter]
+
 
 

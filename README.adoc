@@ -70,4 +70,4 @@ http://localhost:8080/api/postcodescalc/?p1=5b9e9e457db97ca31a7d9d5d&p2=5b9e9e45
 Here you go!
 
 
-
+* /data/postcodes.log .  is recording some useful informations

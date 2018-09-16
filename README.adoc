@@ -6,17 +6,17 @@ image:https://careers.wcc-group.com/sites/all/themes/careeratwcc/images/wcc-logo
 
 == Building
 
-To launch your tests:
+To launch unit tests:
 ```
 ./mvnw clean test
 ```
 
-To package your application:
+To package application:
 ```
 ./mvnw clean package
 ```
 
-To run your application:
+To run application:
 ```
 ./mvnw clean exec:java
 ```

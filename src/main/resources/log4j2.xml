@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+  <Appenders>
+
+    <RollingFile name="app_file" append="true" fileName="/data/postcode.log"
+                 filePattern="/data/$${date:yyyy-MM}/postcode-%d{MM-dd-yyyy}-%i.log.gz">
+      <PatternLayout pattern="%d{ISO8601} %-5p %c:%L - [UKPOSTCODESERVICE] - %m%n"/>
+      <Policies>
+        <OnStartupTriggeringPolicy/>
+        <SizeBasedTriggeringPolicy size="10MB"/>
+        <TimeBasedTriggeringPolicy/>
+      </Policies>
+    </RollingFile>
+    <!--<RollingFile name="vertx_file" append="true" fileName="/var/log/vertx.log"-->
+    <!--filePattern="/var/log/vertx/$${date:yyyy-MM}/vertx-%d{MM-dd-yyyy}-%i.log.gz">-->
+    <!--<PatternLayout pattern="%d{ISO8601} %-5p %c:%L - %m%n"/>-->
+    <!--<Policies>-->
+    <!--<OnStartupTriggeringPolicy/>-->
+    <!--<SizeBasedTriggeringPolicy size="5MB"/>-->
+    <!--<TimeBasedTriggeringPolicy/>-->
+    <!--</Policies>-->
+    <!--</RollingFile>-->
+
+    <Console name="STDOUT" target="SYSTEM_OUT">
+      <!-- <LogStashJSONLayout/> -->
+      <PatternLayout pattern="%d{ISO8601} %-5p %c:%L - [UKPOSTCODESERVICE] %m%n"/>
+    </Console>
+  </Appenders>
+
+  <Loggers>
+    <Logger name="UKPCODE" level="INFO">
+      <AppenderRef ref="app_file"/>
+    </Logger>
+    <Root level="DEBUG">
+      <AppenderRef ref="STDOUT"/>
+    </Root>
+  </Loggers>
+</configuration>

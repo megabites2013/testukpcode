@@ -2,24 +2,58 @@
 
 image:https://careers.wcc-group.com/sites/all/themes/careeratwcc/images/wcc-logo-dark-120x032.png[link="https://careers.wcc-group.com/?page=1"]
 
+A simple rest application calculation the distance between 2 UK post codes
+
 
 
 == Building
+
+get the source and go to its directory, 
 
 To launch unit tests:
 ```
 ./mvnw clean test
 ```
+Unit test will start an embedded mongodb instance, and if your pc has firewall running it might pop up a dialog asking for permission of network connection
+
 
 To package application:
 ```
 ./mvnw clean package
 ```
 
+
+
+before run the application, you need to:
+
+1. start a mongodb at localhost, with default port 27017  
+
+2.prepare /data folder, if not exist just mkdir and give access, application will save log4j file into it
+
+Tips:
+use a mongodb docker image with volume (-v) attach to /data/db
+you may want to use: sudo chmod -R 777 /data for easy demo 
+
+
+
+
 To run application:
 ```
 ./mvnw clean exec:java
 ```
+
+after it starts, you want to open a browser to try following address:
+
+
+=get:
+http://localhost:8080
+http://localhost:8080/gui    (simple gui with CURD based on the rest API)
+http://localhost:8080/api/postcode
+http://localhost:8080/api/postcode/{a postcode id}
+
+=post,put,delete also availible
+the gui with CURD is based on the these rest APIs
+
 
 == Help
 

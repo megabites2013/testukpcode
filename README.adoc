@@ -51,17 +51,21 @@ http://localhost:8080
 
 http://localhost:8080/gui    (simple gui with CURD based on the rest API)
 
-http://localhost:8080/api/postcode
+http://localhost:8080/api/postcodes
 
-http://localhost:8080/api/postcode/{a postcode id without bracket}
+http://localhost:8080/api/postcodes/{a postcode id without bracket}
 
 
 == post,put,delete also availible
 the gui with CURD is based on the these rest APIs
 
 
-== Help
+== Calculate the distance 
 
+copy 2 postcodes id, and input into the url like
+http://localhost:8080/api/postcodescalc/?p1=5b9e9e457db97ca31a7d9d5d&p2=5b9e9e457db97ca31a7d9d78
+
+Here you go!
 
 
 

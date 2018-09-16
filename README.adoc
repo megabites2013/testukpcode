@@ -53,7 +53,7 @@ http://localhost:8080/gui    (simple gui with CURD based on the rest API)
 
 http://localhost:8080/api/postcodes
 
-http://localhost:8080/api/postcodes/{a postcode id without bracket}
+http://localhost:8080/api/postcodes/5b9e9e457db97ca31a7d9d77       just a postcode id following
 
 
 == post,put,delete also availible

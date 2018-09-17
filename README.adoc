@@ -26,7 +26,6 @@ To package application:
 
 == Before run the application, you need to:
 
-
 1. start a mongodb at localhost, with default port 27017
 
 2.prepare /data folder, if not exist just mkdir and give access, application will save log4j file into it

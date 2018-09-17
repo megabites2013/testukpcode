@@ -70,3 +70,6 @@ Here you go!
 
 
 * /data/postcodes.log .  is recording some useful informations
+* you can pass mongo address as jvm parameter :
+./mvnw exec:java -Dconnection_string=mongodb://192.168.99.100:32771
+

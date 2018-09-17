@@ -37,9 +37,12 @@ To package application:
 
 == To run application:
 ```
-./mvnw clean exec:java
+./mvnw exec:java
 ```
-
+you can pass mongo address as jvm parameter
+```
+./mvnw exec:java -Dconnection_string=mongodb://192.168.99.100:32771
+```
 after it starts, you want to open a browser to try following address:
 
 
@@ -70,10 +73,7 @@ Here you go!
 
 
 * /data/postcodes.log .  is recording some useful informations
-* you can pass mongo address as jvm parameter
 
-./mvnw exec:java -Dconnection_string=mongodb://192.168.99.100:32771
-```
 
 
 

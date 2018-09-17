@@ -4,6 +4,7 @@ import com.opencsv.bean.CsvToBeanBuilder;
 import com.wcc.testukpcode.model.PostCode;
 import com.wcc.testukpcode.model.PostCodeDistence;
 import com.wcc.testukpcode.utils.DistanceCalc;
+import com.wcc.testukpcode.utils.MongoCfgHelper;
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Future;
@@ -48,7 +49,7 @@ public class MainVerticle extends AbstractVerticle {
   @Override
   public void start(Future<Void> fut) {
 
-    mongo = MongoClient.createShared(vertx, config().put("db_name", "postcodes-test"));
+    mongo = MongoClient.createShared(vertx, MongoCfgHelper.getConfig(config()));
     LOGGER.debug("MainVerticle - connected to Mongo");
     prepareDataService(nothing -> startWebApp(http -> completeStartup(http, fut)), fut);
   }

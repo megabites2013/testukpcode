@@ -8,7 +8,7 @@ A simple rest application calculation the distance between 2 UK post codes
 
 == Building
 
-get the source and go to its directory, 
+get the source and go to its directory,
 
 To launch unit tests:
 ```
@@ -27,7 +27,7 @@ To package application:
 == Before run the application, you need to:
 
 
-1. start a mongodb at localhost, with default port 27017  
+1. start a mongodb at localhost, with default port 27017
 
 2.prepare /data folder, if not exist just mkdir and give access, application will save log4j file into it
 
@@ -58,9 +58,11 @@ http://localhost:8080/api/postcodes/5b9e9e457db97ca31a7d9d77       just a postco
 the gui with CURD is based on the these rest APIs
 
 
-== Calculate the distance 
+== Calculate the distance
 
 copy 2 postcodes id, and input into the url like
+
+http://localhost:8080/api/postcodescalc/?p1=&p2=
 
 http://localhost:8080/api/postcodescalc/?p1=5b9e9e457db97ca31a7d9d5d&p2=5b9e9e457db97ca31a7d9d78
 

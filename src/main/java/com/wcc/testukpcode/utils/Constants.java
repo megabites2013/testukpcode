@@ -109,4 +109,8 @@ public class Constants {
   public static final String CONTENT_TYPE = "content-type";
   public static final int MAGIC_TWO = 2;
 
+  public static final String CONNECTION_STRING = "connection_string";
+  public static final String DB_NAME = "db_name";
+  public static final String COL_POSTCODES_TEST = "postcodes-test";
+  public static final String MONGODB_LOCALHOST_27017 = "mongodb://localhost:27017";
 }
